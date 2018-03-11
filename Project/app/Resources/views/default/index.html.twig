@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="page">
+
+	<nav role='navigation'>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/comicinfo">Comics</a>
+      <ul>
+        <li><a href="">Superman</a></li>
+        <li><a href="">Batman</a></li>
+		 <li><a href="">Spiderman</a></li>
+		  <li><a href="">Captain America</a></li>
+      </ul>
+    </li>
+	<li><a href="/register">Register</a></li>
+    <li><a href="/login">Login</a></h2>
+  </ul>
+</nav>  
+</div>
+<br></br>
+<div id ="info">
+<div class="infotext">
+	<h1> About This Page </h1>
+	<p>This Website Will Serve As A Superhero Catalog.</p>
+	<p>Members Will be able to request Superhero Entries and Description To Be Added to the Catalog!</p>
+	<br></br>
+	<h1>Users</h1>
+	<p>Registered User Will Be Able To Update and Post about articles regarding Superheroes</p>
+	<p>This Website Serves As A SuperHero Wiki All Registered Users Will Be Able To Contribute. Community Members Must Keep Information Relevant and Accurate.</p>
+	<br></br>
+	<h1>Future Updates</h1>
+	<p>Calendar of Events Will Be Added In the Future. In Addition Users Will Be Able To Create Accounts Within A Future Update</p>
+	<br></
+
+</div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	background: #085A8B;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+*
+{
+  margin: 0 auto 0 auto;
+ }
+
+#page
+{
+  display: block; 
+  height:auto;
+  position: relative; 
+  overflow: hidden; 
+  width: 753px;
+}
+
+/* Menu and Menu Sub List designs */
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+}
+  nav ul{
+    list-style: none;
+    position: relative;
+    float: right;
+    margin-right: 100px;
+    display: inline-table;
+  }
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    nav ul li:hover{background: rgba(0,0,0,.15);}
+    nav ul li:hover > ul{display: block;}
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+      nav ul li a{
+        display: block; 
+        padding: 30px 20px;
+        color: #222; 
+        font-size: .9em;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      nav ul ul{
+        display: none;
+        background: #fff;
+        position: absolute; 
+        top: 100%;
+        box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+        border: 1px solid rgba(0,0,0,.1);
+      }
+        nav ul ul li{float: none; position: relative;}
+          nav ul ul li a {
+            padding: 15px 30px; 
+            border-bottom: 1px solid rgba(0,0,0,.05);
+          }
+
+		  
+/* Design/Styles for Main Info Box and Text */
+div#info {
+	width: 900px;
+	height: 600px;
+    background-color: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px;
+    border-radius: 5px;
+    border: 1px solid;
+	text-align: center;
+}
+
+div#infotext{
+	color: #black;
+	font-family:  Arial, Helvetica, sans-serif;
+	text-align: center;
+	
+	
+}
+
+/* Footer Stuff */
+div#footer {
+	font-family:  Arial, Helvetica, sans-serif;
+    width:300px;
+    height:300px;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #2E2E2E;
+}   
+</style>  
+{% endblock %}
