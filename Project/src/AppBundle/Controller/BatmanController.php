@@ -6,16 +6,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class ComicList extends controller
+class BatmanController extends Controller
 {
- /**
-     * @Route("/comiclist")
+	/**
+     * @Route("/batman", name="Batman")
      */
 	 
-   public function ComicAction(Request $request)
+   public function BatmanAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('C:\FinalProject\Project\app\Resources\views\Comic\ComicList.html.twig', [
+        return $this->render('Comic\batman.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }

@@ -26,8 +26,7 @@ security:
                 check_path: login
             logout:
                 path: /logout
-                target: /
+                target: /logout
         
-    access_control:
-        - { path: ^/comicinfo, roles: ROLE_USER }
+    
             
